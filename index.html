@@ -374,6 +374,17 @@ h1{font-size:clamp(46px,6.6vw,88px)}h1 .ln:nth-child(3){white-space:nowrap}
 .hero .wrap{grid-template-columns:1.45fr .55fr}
 .hero .shapes .s2{left:auto;right:1%;bottom:90px;width:96px;height:96px}
 @media(max-width:900px){h1 .ln:nth-child(3){white-space:normal}.hero .wrap{grid-template-columns:1fr}}
+.hero .wrap{max-width:1360px}
+@media(min-width:901px){.hero .wrap{grid-template-columns:1.3fr .7fr}.badge{left:-60px;bottom:-34px;width:112px;height:112px}}
+.badge{display:none!important}
+.orbit{position:absolute;left:50%;top:50%;width:150%;aspect-ratio:1;margin:-75% 0 0 -75%;border:1.5px dashed rgba(35,35,43,.28);border-radius:50%;z-index:0;animation:spin 50s linear infinite;pointer-events:none}
+.orbit i{position:absolute;inset:0;transform:rotate(var(--a))}
+.orbit i::before{content:"";position:absolute;left:50%;top:0;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:var(--c);box-shadow:0 0 0 4px var(--cream)}
+.spk{position:absolute;z-index:2;font-size:26px;line-height:1;animation:tw 3.2s ease-in-out infinite}
+.s-a{left:-70px;top:14%;color:#5BB5D3}.s-b{right:-48px;top:-20px;color:#E0A24A;font-size:36px;animation-delay:-1s}.s-c{right:-62px;bottom:18%;color:#E58A7F;font-size:22px;animation-delay:-2s}
+@keyframes tw{50%{transform:scale(.6) rotate(25deg);opacity:.45}}
+@media(max-width:900px){.orbit{width:128%;margin:-64% 0 0 -64%}.spk{display:none}}
+@media(prefers-reduced-motion:reduce){.orbit,.spk{animation:none}}
 </style>
 </head>
 <body>
@@ -395,7 +406,7 @@ h1{font-size:clamp(46px,6.6vw,88px)}h1 .ln:nth-child(3){white-space:nowrap}
   <div class="btns fade"><a class="btn fill" style="--c:var(--tech)" href="#work">See my work</a><a class="btn" style="--c:var(--biz)" href="#" data-res>Resume</a></div>
  </div>
  <div class="photo-wrap">
-  <div class="arch back"></div><div class="badge" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="cp" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs><text font-family="JetBrains Mono,monospace" font-size="9.5" fill="#23232B"><textPath href="#cp" textLength="272" lengthAdjust="spacing">TECH • DATA • BUSINESS • MARKETING • </textPath></text></svg><b>✦</b></div>
+  <div class="orbit" aria-hidden="true"><i style="--a:0deg;--c:var(--tech)"></i><i style="--a:90deg;--c:var(--data)"></i><i style="--a:180deg;--c:var(--biz)"></i><i style="--a:270deg;--c:var(--mkt)"></i></div><span class="spk s-a" aria-hidden="true">✦</span><span class="spk s-b" aria-hidden="true">✦</span><span class="spk s-c" aria-hidden="true">✦</span><div class="arch back"></div>
   <div class="frame"></div>
  </div>
 </div><div class="cue" aria-hidden="true"><i></i>scroll</div></header>
